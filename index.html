@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khám phá Cần Thơ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>🌆 Cần Thơ – Thành phố bên bờ sông Hậu</h1>
+      <p>"Cần Thơ gạo trắng nước trong, ai đi đến đó lòng không muốn về."</p>
+      <a href="#about" class="btn">Khám phá ngay</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#about">Giới thiệu</a>
+    <a href="#places">Địa điểm</a>
+    <a href="#food">Ẩm thực</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>Giới thiệu</h2>
+    <p>
+      Cần Thơ là trung tâm kinh tế, văn hóa và du lịch của miền Tây Nam Bộ. 
+      Với vẻ đẹp yên bình của sông nước, những vườn cây trĩu quả và con người hiền hòa, 
+      Cần Thơ mang đến trải nghiệm khó quên cho mọi du khách.
+    </p>
+    <img src="images/ben-ninh-kieu.jpg" alt="Bến Ninh Kiều - Cần Thơ" />
+  </section>
+
+  <section id="places" class="fade-in">
+    <h2>Địa điểm nổi bật</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/cho-noi-cai-rang.jpg" alt="Chợ nổi Cái Răng">
+        <h3>Chợ nổi Cái Răng</h3>
+        <p>Biểu tượng đặc trưng của miền sông nước, nơi bạn có thể thưởng thức ẩm thực ngay trên thuyền.</p>
+      </div>
+      <div class="card">
+        <img src="images/cau-can-tho.jpg" alt="Cầu Cần Thơ">
+        <h3>Cầu Cần Thơ</h3>
+        <p>Công trình hiện đại bắc qua sông Hậu – niềm tự hào của người dân miền Tây.</p>
+      </div>
+      <div class="card">
+        <img src="images/dai-hoc-can-tho.jpg" alt="Đại học Cần Thơ">
+        <h3>Đại học Cần Thơ</h3>
+        <p>Trường đại học trọng điểm quốc gia, đào tạo hàng chục ngàn sinh viên mỗi năm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="food" class="fade-in">
+    <h2>Ẩm thực Cần Thơ</h2>
+    <p>Ẩm thực nơi đây là sự hòa quyện giữa hương vị dân dã và tinh tế của miền Tây.</p>
+    <img src="images/banh-xeo-can-tho.jpg" alt="Bánh xèo miền Tây" />
+    <p>Đừng quên thử món bánh xèo, lẩu mắm và trái cây tươi ngon từ các miệt vườn!</p>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Liên hệ</h2>
+    <p>📞 Điện thoại: <strong>0909552009</strong></p>
+    <p>🌐 Website du lịch chính thức: 
+      <a href="https://dulichcantho.vn" target="_blank">dulichcantho.vn</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 - Thiết kế bởi Thế Nguyễn | Cần Thơ, Việt Nam</p>
+  </footer>
+
+  <script>
+    // hiệu ứng fade-in khi cuộn
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
